@@ -39,7 +39,7 @@ server.get('/api/diceroll',
   }),
 );
 
-server.post('/api/login',
+server.post('/api/register',
   api.endpoint({
     resourceType: 'user',
     validation: {

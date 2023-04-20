@@ -13,7 +13,7 @@ const api = jsonder();
 
 server.use('/api', api.middleware());
 
-server.get('/diceroll',
+server.get('/api/diceroll',
   api.endpoint({
     resourceType: 'diceroll',
     handler: () => success({

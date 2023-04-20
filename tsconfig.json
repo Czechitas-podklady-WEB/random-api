@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "es2022",
+    "strict": true,
+    "moduleResolution": "nodenext"
+  },
+  "include": ["./src/**/*.ts"]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "random-api",
+  "version": "1.0.0",
+  "description": "API pro testování HTTP chybových stavů",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -w",
+    "build": "tsx",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Czechitas-podklady-WEB/random-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Czechitas-podklady-WEB/random-api/issues"
+  },
+  "homepage": "https://github.com/Czechitas-podklady-WEB/random-api#readme",
+  "devDependencies": {
+    "@tsconfig/node18": "^2.0.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.12",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonder": "^0.0.7",
+    "monadix": "^0.2.0"
+  }
+}

@@ -13,7 +13,7 @@ const api = jsonder();
 
 server.use('/api', api.middleware());
 
-server.get('/api/diceroll',
+server.get('/api/diceroll/reliable',
   api.endpoint({
     resourceType: 'diceroll',
     handler: () => success({
@@ -22,6 +22,22 @@ server.get('/api/diceroll',
     }),
   }),
 );
+
+server.get('/api/diceroll/shaky', (req, res) => {
+  if (Math.random() < 0.5) {
+    api.sendFail(res, {
+      status: 500,
+      code: 'unreliable-dice',
+      detail: 'The dice is shaking too much to roll',
+    });
+    return;
+  }
+
+  api.sendSuccess(res, {
+    id: '',
+    number: diceroll(),
+  });
+});
 
 server.listen(port, () => {
   console.log(`listening on ${port}...`);
